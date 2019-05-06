@@ -1,4 +1,4 @@
-# Proyecto 4 (Sistemas Escalables) - Geolocalizador 2.0
+# Proyecto 4 - Geolocalizador 2.0
 
 ## Integrantes 
 
