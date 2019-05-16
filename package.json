@@ -4,7 +4,7 @@
   "description": "Proyecto gpsTracking",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Camilo Suaza",
@@ -19,6 +19,6 @@
     "mongoose": "^4.6.0"
   },
   "devDependencies": {
-    "nodemon": "^1.10.2"
+    "nodemon": "^1.19.0"
   }
 }
