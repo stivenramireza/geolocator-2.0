@@ -10,6 +10,6 @@
 
 * [Análisis y Diseño](analisis-diseno.md)
 
-# 4. Despliegue en AWS
+# 2. Despliegue en AWS
 
 * [Despliegue en AWS](deploy-on-aws.md)
