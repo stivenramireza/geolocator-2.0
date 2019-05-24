@@ -4,19 +4,19 @@ console.log("este es el env: "+env)
 var config = {
   development: {
     port: process.env.PORT || 3000,
-    db: process.env.MONGODB_URI || 'mongodb://mongo-server:27017/database-routes',
+    db: 'mongodb+srv://root:root@cluster0-l0ovb.mongodb.net/test?retryWrites=true',
     SECRET_TOKEN: 'estaesmiclavedetokenparaelusuario1234*'
   },
 
   test: {
     port: process.env.PORT || 3000,
-    db: process.env.MONGODB_URI || 'mongodb://localhost:27017/database-routes',
+    db:  'mongodb+srv://root:root@cluster0-l0ovb.mongodb.net/test?retryWrites=true',
     SECRET_TOKEN: 'estaesmiclavedetokenparaelusuario1234*'
   },
 
   production: {
     port: process.env.PORT || 3000,
-    db: process.env.MONGODB_URI || 'mongodb://mongo-server:27017/database-routes',
+    db: 'mongodb+srv://root:root@cluster0-l0ovb.mongodb.net/test?retryWrites=true',
     SECRET_TOKEN: 'estaesmiclavedetokenparaelusuario1234*'
   }
 };
