@@ -12,7 +12,7 @@ services:
     depends_on:
       - nodeapp
   nodeapp:
-    container_name: webservice
+    container_name: webserver
     restart: always
     build: .
     ports:
