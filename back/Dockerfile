@@ -8,7 +8,7 @@ LABEL maintainer="Camilo Suaza Gallego - csuazag@eafit.edu.co"
 ARG PORT=3000
 ENV PORT $PORT
 
-WORKDIR /webserver
+WORKDIR /webapp
 COPY . ./
 
 RUN npm install --test
