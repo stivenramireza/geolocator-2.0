@@ -6,10 +6,10 @@ var config = {
     port: process.env.PORT || 3030
   },
   production: {
-    port: process.env.PORT || 3000
+    port: process.env.PORT || 3030
   },
   test: {
-    port: process.env.PORT || 3000
+    port: process.env.PORT || 3030
   }
 };
 
