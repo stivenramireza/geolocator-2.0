@@ -14,7 +14,7 @@ $(document).ready(function () {
             var settings = {
                 "async": false,
                 "crossDomain": true,
-                "url": "/api/signin",
+                "url": "http://backend-topicos-telematica.tk//api/signin",
                 "method": "POST",
                 "headers": {
                     "content-type": "application/json",

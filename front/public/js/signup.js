@@ -20,7 +20,7 @@ $(document).ready(function () {
             var settings = {
                 "async": false,
                 "crossDomain": true,
-                "url": "/api/signup",
+                "url": "http://backend-topicos-telematica.tk/api/signup",
                 "method": "POST",
                 "headers": {
                     "content-type": "application/json",
