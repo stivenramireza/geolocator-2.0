@@ -7,9 +7,7 @@ const bcrypt = require('bcrypt-nodejs')
 
 function signUp(req, res) {
     const user = new User({
-        email: req.body.email,
-        displayName: req.body.displayName,
-        password: req.body.password
+        userId: req.body.userId,
     })
 
     user.save((err) => {
@@ -19,15 +17,13 @@ function signUp(req, res) {
             message: 'Registro exitoso',
             token: service.createToken(user),
             userId: user._id,
-            userEmail: user.email,
-            userName: user.displayName   
         })
     })
 }
 
 function signIn(req, res) {
 
-    User.findOne({ email: req.body.email }).select('email displayName password').exec(function (err, user) {
+    User.findOne({ userId: req.body.userId }).select('userId').exec(function (err, user) {
         if (err) return res.status(500).send({ message: err })
         if (!user) return res.status(404).send({ message: 'Usuario no registrado' })
 
@@ -38,8 +34,6 @@ function signIn(req, res) {
                 message: 'Login exitoso',
                 token: service.createToken(user),
                 userId: user._id,
-                userEmail: user.email,
-                userName: user.displayName
             })
         } else {
             res.status(400).send({

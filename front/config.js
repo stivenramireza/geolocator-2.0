@@ -3,13 +3,13 @@ console.log("este es el env: "+env)
 
 var config = {
   development: {
-    port: process.env.PORT || 3030
+    port: process.env.PORT || 3001
   },
   production: {
-    port: process.env.PORT || 3000
+    port: process.env.PORT || 3001
   },
   test: {
-    port: process.env.PORT || 3000
+    port: process.env.PORT || 3001
   }
 };
 
