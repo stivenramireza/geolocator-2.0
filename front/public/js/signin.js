@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     $('#alert1').hide();
     $('#alert2').hide();
@@ -47,3 +48,25 @@ $(document).ready(function () {
         window.location.replace('/signup');        
     });
 });
+/** 
+window.addEventListener('load', function() {
+    var idToken;
+    var accessToken;
+    var expiresAt;
+  
+    var webAuth = new auth0.WebAuth({
+      domain: 'geolocator.auth0.com',
+      clientID: 'LDloosSKIbmH2mfq3on9MeLQNnnDsKYb',
+      responseType: 'token id_token',
+      scope: 'openid',
+      redirectUri: window.location.href
+    });
+  
+    var loginBtn = document.getElementById('btn-login');
+  
+    loginBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      webAuth.authorize();
+    });
+  
+  });*/

@@ -20,7 +20,7 @@ function signUp(req, res) {
             token: service.createToken(user),
             userId: user._id,
             userEmail: user.email,
-            userName: user.displayName   
+            userName: user.displayName 
         })
     })
 }
