@@ -5,10 +5,7 @@ const routeCtrl = require('../controllers/route')
 const pointCtrl = require('../controllers/point')
 const userCtrl = require('../controllers/user')
 const auth = require('../middlewares/auth')
-
 const api = express.Router()
-
-
 
 
 //API Routes
