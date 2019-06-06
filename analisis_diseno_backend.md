@@ -27,36 +27,35 @@
 
 ## 2.1 Modelo de datos:
 
- **User**:
+  **User**:
 
     {
-		  UserSchema:{
-				auth0Id: String, 
-				email: String, 
-		  }
+      UserSchema:{
+        auth0Id: String, 
+        email: String, 
+      }
     }
 
   **Route**:
 
     {
-		  RouteSchema:{
-				auth0Id: String, 
-				name: String, 
-				points: Array, 
-				description: String
-		  }
+      RouteSchema:{
+        auth0Id: String, 
+        name: String, 
+        points: Array, 
+        description: String
+      }
     }
-	
+
   **Point**:
 
     {
-		  RouteSchema:{
-				latitud: Number, 
-				longitud: Number, 
-				date: String, 
-		  }
+      RouteSchema:{
+        latitud: Number, 
+        longitud: Number, 
+        date: String, 
+      }
     }
-
 ## 2.2 Servicios Web
 
   1. URL: http://server/usuarios/registro
