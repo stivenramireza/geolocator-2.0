@@ -4,20 +4,17 @@ console.log("este es el env: "+env)
 var config = {
   development: {
     port: process.env.PORT || 3000,
-    db: 'mongodb+srv://root:root@cluster0-l0ovb.mongodb.net/test?retryWrites=true',
-    SECRET_TOKEN: 'estaesmiclavedetokenparaelusuario1234*'
+    db: process.env.DATABASE_URL,
   },
 
   test: {
     port: process.env.PORT || 3000,
-    db:  'mongodb+srv://root:root@cluster0-l0ovb.mongodb.net/test?retryWrites=true',
-    SECRET_TOKEN: 'estaesmiclavedetokenparaelusuario1234*'
+    db:  process.env.DATABASE_URL,
   },
 
   production: {
     port: process.env.PORT || 3000,
-    db: 'mongodb+srv://root:root@cluster0-l0ovb.mongodb.net/test?retryWrites=true',
-    SECRET_TOKEN: 'estaesmiclavedetokenparaelusuario1234*'
+    db: process.env.DATABASE_URL,
   }
 };
 

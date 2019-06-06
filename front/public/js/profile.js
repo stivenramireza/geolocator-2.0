@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    console.log("userId: ", Cookies.get('userId'))
     $("#alert1").hide();
     $("#alert2").hide();
 
@@ -10,12 +10,8 @@ $(document).ready(function () {
     var arrayPuntos;
 
     $("#btnLogout").click(function () {
-        Cookies.remove('token');
         Cookies.remove('userId');
-        Cookies.remove('userName');
-        Cookies.remove('userEmail');
-
-        window.location.replace('/signin');
+        window.location.replace('http://localhost:3000/logout');
     });
 
     $("cuenta").click(function () {
@@ -32,23 +28,17 @@ $(document).ready(function () {
         $("#containerCrearRuta").hide();
         $("#containerCuenta").hide();
         $("#containerMisRutas").show();
-
-
         getRoutes();
-
-
-
     });
 
     function getRoutes() {
         var settings = {
             "async": false,
             "crossDomain": true,
-            "url": "http://backend-topicos-telematica.tk/api/route/" + Cookies.get('userId'),
+            "url": "http://localhost:3000/api/route/" + Cookies.get('userId'),
             "method": "GET",
             "headers": {
                 "content-type": "application/json",
-                "authorization": Cookies.get('token'),
                 "cache-control": "no-cache"
             },
             "processData": false
@@ -69,14 +59,12 @@ $(document).ready(function () {
     }
 
     function createCards(routes) {
-
         var numRows = Math.ceil((routes.length / 3));
         var i;
         for (i = 0; i < numRows; i++) {
             var idGroupCards = "idGroupCards" + i;
             $("#containerMisRutas").append("<div class='card-deck' id='" + idGroupCards + "'></div>");
         }
-
         var controllerRow = -1;
         for (i = 0; i < routes.length; i++) {
             if ((i % 3) == 0) {
@@ -93,18 +81,12 @@ $(document).ready(function () {
             $("#" + idCardBody).append("<h5 class='card-title'>" + routes[i].name + "</h5>");
             $("#" + idCardBody).append("<p class='card-text'>" + routes[i].description + "</p>");
         }
-
     }
 
-
-
     function initMap(points, idMap) {
-
         console.log("estoy en initMap");
         console.log("me llego de puntos", points);
         console.log("me llego de id", idMap);
-
-
         var map = new google.maps.Map(document.getElementById(idMap), {
             zoom: 15,
             center: { lat: points[0].lat, lng: points[0].lng },
@@ -133,11 +115,10 @@ $(document).ready(function () {
                 var settings = {
                     "async": false,
                     "crossDomain": true,
-                    "url": "http://backend-topicos-telematica.tk/api/point/" + idPointThisRoute,
+                    "url": "http://localhost:3000/api/point/" + idPointThisRoute,
                     "method": "GET",
                     "headers": {
                         "content-type": "application/json",
-                        "authorization": Cookies.get('token'),
                         "cache-control": "no-cache"
                     },
                     "processData": false
@@ -156,8 +137,6 @@ $(document).ready(function () {
             initMap(arrayPuntos, "map" + i);
         }
     }
-
-
 
     ///////////////////////////////////////////////////
     //Jquery de Crear una ruta//
@@ -203,10 +182,9 @@ $(document).ready(function () {
             var settings = {
                 "async": false,
                 "crossDomain": true,
-                "url": "http://backend-topicos-telematica.tk/api/point",
+                "url": "http://localhost:3000/api/point",
                 "method": "POST",
                 "headers": {
-                    "authorization": Cookies.get('token'),
                     "cache-control": "no-cache",
                     "content-type": "application/json"
                 },
@@ -238,15 +216,14 @@ $(document).ready(function () {
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "http://backend-topicos-telematica.tk/api/route",
+            "url": "http://localhost:3000/api/route",
             "method": "POST",
             "headers": {
-                "authorization": Cookies.get('token'),
                 "cache-control": "no-cache",
                 "content-type": "application/json",
             },
             "data": JSON.stringify({
-                "userId": Cookies.get('userId'),
+                "auth0Id": Cookies.get('userId'),
                 "name": name,
                 "points": points,
                 "description": description

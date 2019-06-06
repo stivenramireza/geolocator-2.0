@@ -11,6 +11,6 @@ mongoose.connect(config.db, {  useNewUrlParser: true},  (err, res) => {
   console.log('Conexión a la base de datos establecida...')
 
   app.listen(config.port, () => {
-    console.log(`API REST corriendo en http://localhost:${config.port}`)
+    console.log(`Backend corriendo en http://localhost:${config.port}`)
   })
 })

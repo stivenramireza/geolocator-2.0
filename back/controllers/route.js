@@ -18,9 +18,9 @@ function getAllRoutes(req, res) {
 
 
 function getRoutes(req, res) {
-    let userId = req.params.userId
+    let auth0Id = req.params.auth0Id
 
-    Route.find({ userId: userId }, (err, routes) => {
+    Route.find({ auth0Id: auth0Id }, (err, routes) => {
         if (err) return res.status(500).send({ message: `Error al realizar la petición: ${err}` })
         if (!routes) return res.status(404).send({ message: `El usuario no tiene rutas` })
 
@@ -32,7 +32,7 @@ function getRoutes(req, res) {
 function saveRoute(req, res) {
 
     let route = new Route()
-    route.userId = req.body.userId
+    route.auth0Id = req.body.auth0Id
     route.name = req.body.name
     route.points = req.body.points
     route.description = req.body.description

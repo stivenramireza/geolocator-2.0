@@ -1,11 +1,9 @@
 'use strict'
 
-
 var path = require('path');
 
-
-function redirectSignin(req, res) {
-    res.redirect('/signin');
+function showMain(req, res){
+    res.sendFile(path.resolve('views/main.html'))
 }
 
 function showSignin(req, res) {
@@ -21,7 +19,7 @@ function showProfile(req, res) {
 }
 
 module.exports = {
-    redirectSignin,
+    showMain,
     showSignin,
     showSignup,
     showProfile
