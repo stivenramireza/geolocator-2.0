@@ -63,9 +63,7 @@ passport.use(strategy);
 const app = express()
 
 app.use((req, res, next) => {
-    //res.header('Access-Control-Allow-Origin',"http://35.244.156.53");
-    res.header('Access-Control-Allow-Origin',"http://localhost:3030");
-    res.header('Access-Control-Allow-Origin',"https://geolocator.auth0.com");
+    res.header('Access-Control-Allow-Origin',"http://35.244.156.53");
     res.header('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, cache-control, authorization, Authorization');
     if(req.method ==="OPTIONS"){
         res.header("Access-Control-Allow-Methods","PUT, POST, PATCH, DELETE, GET")

@@ -25,20 +25,20 @@ api.delete('/api/point/:pointId',  secured(), pointCtrl.deletePoint)
 api.get('/login', passport.authenticate('auth0', {
     scope: 'openid email profile'
   }), function (req, res, data) {
-    res.redirect('http://localhost:3030/');
+    res.redirect('http://frontend-topicos-telematica.tk/');
   });
   
   // Perform the final stage of authentication and redirect to previously requested URL or '/profile'
   api.get('/callback', function (req, res, next) {
     passport.authenticate('auth0', function (err, user, info) {
       if (err) { return next(err); }
-      if (!user) { return res.redirect('http://localhost:3030/'); }
+      if (!user) { return res.redirect('http://frontend-topicos-telematica.tk/'); }
       req.logIn(user, function (err) {
         if (err) { return next(err); }
         const returnTo = req.session.returnTo;
         delete req.session.returnTo;
         res.cookie('userId', user._doc.auth0Id);
-        res.redirect(returnTo || 'http://localhost:3030/profile');
+        res.redirect(returnTo || 'http://frontend-topicos-telematica.tk/profile');
       });
     })(req, res, next);
   });
@@ -46,7 +46,7 @@ api.get('/login', passport.authenticate('auth0', {
   // Perform session logout and redirect to homepage
   api.get('/logout', (req, res) => {
     req.logout();
-    res.redirect('http://localhost:3030/');
+    res.redirect('http://frontend-topicos-telematica.tk/');
   });
 
 module.exports = api

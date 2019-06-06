@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     $("#btnLogout").click(function () {
         Cookies.remove('userId');
-        window.location.replace('http://localhost:3000/logout');
+        window.location.replace('http://backend-topicos-telematica.tk/logout');
     });
 
     $("cuenta").click(function () {
@@ -35,7 +35,7 @@ $(document).ready(function () {
         var settings = {
             "async": false,
             "crossDomain": true,
-            "url": "http://localhost:3000/api/route/" + Cookies.get('userId'),
+            "url": "http://backend-topicos-telematica.tk/api/route/" + Cookies.get('userId'),
             "method": "GET",
             "headers": {
                 "content-type": "application/json",
@@ -115,7 +115,7 @@ $(document).ready(function () {
                 var settings = {
                     "async": false,
                     "crossDomain": true,
-                    "url": "http://localhost:3000/api/point/" + idPointThisRoute,
+                    "url": "http://backend-topicos-telematica.tk/api/point/" + idPointThisRoute,
                     "method": "GET",
                     "headers": {
                         "content-type": "application/json",
@@ -182,7 +182,7 @@ $(document).ready(function () {
             var settings = {
                 "async": false,
                 "crossDomain": true,
-                "url": "http://localhost:3000/api/point",
+                "url": "http://backend-topicos-telematica.tk/api/point",
                 "method": "POST",
                 "headers": {
                     "cache-control": "no-cache",
@@ -216,7 +216,7 @@ $(document).ready(function () {
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "http://localhost:3000/api/route",
+            "url": "http://backend-topicos-telematica.tk/api/route",
             "method": "POST",
             "headers": {
                 "cache-control": "no-cache",
