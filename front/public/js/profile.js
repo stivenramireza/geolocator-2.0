@@ -44,7 +44,7 @@ $(document).ready(function () {
         var settings = {
             "async": false,
             "crossDomain": true,
-            "url": "http://backend-topicos-telematica.tk//api/route/" + Cookies.get('userId'),
+            "url": "http://backend-topicos-telematica.tk/api/route/" + Cookies.get('userId'),
             "method": "GET",
             "headers": {
                 "content-type": "application/json",
@@ -133,7 +133,7 @@ $(document).ready(function () {
                 var settings = {
                     "async": false,
                     "crossDomain": true,
-                    "url": "http://backend-topicos-telematica.tk//api/point/" + idPointThisRoute,
+                    "url": "http://backend-topicos-telematica.tk/api/point/" + idPointThisRoute,
                     "method": "GET",
                     "headers": {
                         "content-type": "application/json",
@@ -203,7 +203,7 @@ $(document).ready(function () {
             var settings = {
                 "async": false,
                 "crossDomain": true,
-                "url": "http://backend-topicos-telematica.tk//api/point",
+                "url": "http://backend-topicos-telematica.tk/api/point",
                 "method": "POST",
                 "headers": {
                     "authorization": Cookies.get('token'),
