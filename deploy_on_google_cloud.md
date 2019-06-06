@@ -8,3 +8,11 @@
 - Camilo Suaza Gallego - csuazag@eafit.edu.co
 
 # Despliegue en Google Cloud
+
+## Descargar el proyecto github
+
+      $ cd /tmp/
+      $ mkdir apps
+      $ cd apps
+      $ git clone https://github.com/stivenramireza/Geolocator_2.0.git
+      $ cd Geolocator_2.0
