@@ -8,7 +8,7 @@
 
 ## Despliegue en Google Cloud
 
-- Link de la Web App: https://geolocator.tk
+- Link de la Web App: http://frontend-topicos-telematica.tk/
 
 # Descripción
 
@@ -42,9 +42,9 @@ Aplicación web escalable que permite guardar la ubicación GPS desde el disposi
 
 * [Análisis y Diseño de la Seguridad](analisis_diseno_seguridad.md)
 
-# 6. Kubernetes
+# 6. Docker
 
-* [Despliegue en Kubernetes](deploy_on_kubernetes.md)
+* [Despliegue en Docker](deploy_on_docker.md)
 
 # 7. Google Cloud
 
