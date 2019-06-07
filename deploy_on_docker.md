@@ -9,6 +9,10 @@
 
 # Despliegue en Docker
 
+<p align="center">
+<img src="https://ugeek.github.io/blog/images-blog/docker.png">
+</p>
+
 ## Instalar Docker
 
 ### En Ubuntu:
