@@ -101,3 +101,7 @@
     Método: DELETE
     URI: /delRutas/nombreUsuario
     Descripción: Borra todas las rutas del usuario seleccionado almacenadas en la base de datos.
+
+# 3. Despliegue
+
+- Link del despliegue del back-end: http://backend-topicos-telematica.tk/
