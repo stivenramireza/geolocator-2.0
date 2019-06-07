@@ -8,6 +8,10 @@
 
 # 1. Análisis y Diseño del Back-End
 
+<p align="center">
+<img src="https://dhanjivpandey.com/wp-content/uploads/2018/02/nodejs-520.jpg">
+</p>
+
 ## 1.1 Requisitos funcionales:
 
 1. Registrar y autenticar usuarios.
