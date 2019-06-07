@@ -32,3 +32,7 @@
 Todo estos archivos estáticos se encuentran soportados en un servidor NodeJS. Este servidor corre en el puerto 80, dado que nuestra arquitectura de la aplicación es una Arquitectura Cliente / Servidor, este servidor que contiene el el frontend y expone los archivos en una carpeta 'public'.
 
 Para el funcionamiento escalable del Frontend utilizamos un load balancer, lo que nos ayudará a que que se crearán nuevas máquinas corriendo este front dado a la demanda en peticiones (cargas) que empiecen a requerir los usuarios.
+
+# 3. Despliegue
+
+- Link del despliegue del front-end: http://frontend-topicos-telematica.tk/
