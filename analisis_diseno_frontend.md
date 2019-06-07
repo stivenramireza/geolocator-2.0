@@ -8,6 +8,10 @@
 
 # 1. Análisis y Diseño del Front-End
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/31974084/59079794-fe133400-88aa-11e9-88d0-87f5596dc515.png">
+</p>
+
 ## 1.1 Requisitos funcionales:
 
 1. Registrar y autenticar usuarios.
